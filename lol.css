@@ -1,0 +1,199 @@
+
+
+body {
+        background-image: url('pexels-felixmittermeier-956999.jpg');
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Segoe UI', sans-serif;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(0.5px);
+        z-index: 1;
+      }
+      
+
+    
+   /* .container {
+        position: relative; 
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        max-width: 500px;
+  }
+        */
+        
+  .container {
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    color: rgb(71, 71, 71);
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    height: 475px;
+    position: relative;
+    padding-bottom: 130px;
+  
+
+  }
+ h3{
+    color: #dbdbdb;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 20px;
+
+ }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #dbdbdb;
+  }
+
+  p {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  audio {
+    margin-top: 30px;
+    width: 100%;
+    
+  }
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+  }
+  #video-background {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+  }
+  .audio-player {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    bottom: 5px;
+    position: relative;
+  }
+  
+  /* Style the audio element (to an extent, depends on browser) */
+  audio {
+    width: 100%;
+    outline: none;
+    filter: brightness(1.2); /* a soft touch */
+    border-radius: 10px;
+  }
+  a {
+    display: inline-block; /* allows transform to work properly */
+    transition: transform 0.2s ease; /* smooth scaling */
+    text-decoration: none; /* optional, just for cleaner look */
+    color: rgb(255, 255, 255); /* optional, link color */
+    text-align: center;
+    position: relative;
+    bottom: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+  }
+  
+  a:hover {
+    transform: scale(1.5); /* scales the link to 105% of its size */
+    color: grey;
+  }
+  a:visited{
+    color: white;
+  }
+  h1:hover{
+    color: grey;
+  }
+  #Sc{
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+  }
+  #progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+    position: relative;
+    bottom: 30px;
+
+  }
+  #progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(19, 18, 18, 0.2)
+  }
+  .controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 50px;
+}
+.controls div{
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background: rgba(37, 37, 37, 0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 5px 10px rgba(83, 83, 83, 0.863);
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+}
+.controls div:nth-child(2){
+  transform: scale(1.5);
+  background: #2e2e2e00;
+  color: #fff;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celina</title>
+  <link rel="stylesheet" href="lol.css">
+  <script src="https://kit.fontawesome.com/d0b5a7439a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="video-background">
+    <video autoplay muted loop id="video-background">
+      <source src="videoplayback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="container">
+    <h1>𝓒𝓮𝓵𝓲𝓷𝓪☆</h1>
+    <p>
+      𝒰𝓁𝓆𝓊𝒾𝑜𝓇𝓇𝒶 𝒞𝒾𝒻𝑒𝓇: <br>
+      "𝓦𝓱𝓪𝓽 𝓲𝓼 𝓽𝓱𝓲𝓼 '𝓱𝓮𝓪𝓻𝓽'?... 𝓘𝓯 𝓘 𝓽𝓮𝓪𝓻 𝓸𝓹𝓮𝓷 𝓽𝓱𝓪𝓽 𝓬𝓱𝓮𝓼𝓽 𝓸𝓯 𝔂𝓸𝓾𝓻𝓼, 𝔀𝓲𝓵𝓵 𝓘 𝓼𝓮𝓮 𝓲𝓽 𝓽𝓱𝓮𝓻𝓮?... 
+      𝓘𝓯 𝓘 𝓼𝓶𝓪𝓼𝓱 𝓸𝓹𝓮𝓷 𝓽𝓱𝓪𝓽 𝓼𝓴𝓾𝓵𝓵 𝓸𝓯 𝔂𝓸𝓾𝓻𝓼, 𝔀𝓲𝓵𝓵 𝓘 𝓼𝓮𝓮 𝓲𝓽 𝓽𝓱𝓮𝓻𝓮?"
+    </p>
+
+    <div class="audio-player">
+      <h3>ɴᴏᴡ ᴘʟᴀʏɪɴɢ ♫ <br>ꜰᴏʀ ʜᴇʀ-ʙʏ ᴡʜᴀᴛɪꜱᴀʜᴇᴀʀᴛ ♡</h3>
+      
+      <audio  id="song">
+        <source src="whatsaheart - for her OFFICIAL VERSION.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <input type="range" value="0" id="progress">
+
+      <div class="controls">
+        <div><i class="fa-solid fa-backward"></i></div>
+        <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        <div><i class="fa-solid fa-forward"></i></div>
+      </div>
+    </div>
+
+    <div class="socials">
+      <p id="Sc">ᴍʏꜱᴏᴄɪᴀʟꜱ.</p>
+      <a target="_blank" href="https://open.spotify.com/user/31dgyhngkaelaqjvry27juboqnuu?si=6jSX0L1XQ3mtekEl3y_m5A">
+        <ion-icon name="musical-notes-outline" size="large"></ion-icon>
+      </a>
+      <a target="_blank" href="https://discord.gg/tCSAGbAx">
+        <ion-icon name="logo-discord" size="large"></ion-icon>
+      </a>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+let progress = document.getElementById("progress");
+let song = document.getElementById("song");
+let ctrlIcon = document.getElementById("ctrlIcon");
+
+song.onloadedmetadata = function(){
+progress.max = song.duration;
+progress.value = song. currentTime;
+
+}
+
+function playPause(){
+    if(ctrlIcon.classList.contains("fa-pause")){
+        song.pause();
+        ctrlIcon.classList.remove("fa-pause");
+        ctrlIcon.classList.add("fa-play");
+    }
+    else{
+        song.play();
+        ctrlIcon.classList.add("fa-pause");
+        ctrlIcon.classList.remove("fa-play");
+        
+        }
+   
+}
+if(song.play()){
+
+setInterval(()=>{
+progress.value = song.currentTime;
+},500);
+}  
+
+
+    
+ progress.onchange = function(){
+
+    song.play();
+    song. currentTime = progress.value;
+    ctrlIcon.classList.add("fa-pause");
+    ctrlIcon.classList.remove("fa-play");
+
+ }
+
+
+
+  </script>
+</body>
+</html>
